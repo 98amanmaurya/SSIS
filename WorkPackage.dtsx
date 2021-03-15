@@ -1,0 +1,2158 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/29/2021 9:49:20 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="AMAN"
+  DTS:CreatorName="AMAN\Dell"
+  DTS:DTSID="{0FDFCF36-8973-479C-A56B-9EF55C4664DB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.150"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="WorkPackage"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{6EED47F1-80BE-4F2B-8E14-5195BC9FD58D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AdvWrk17]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4CFD652F-1358-4C87-9805-5A4A88D326B6}"
+      DTS:ObjectName="AdvWrk17">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=AdvWrk17;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Products__CSV 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Products csv file from My package"
+      DTS:DTSID="{B015C4B9-D53A-426B-A914-28805579612B}"
+      DTS:ObjectName="Products__CSV 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Dell\OneDrive\Desktop\cap 7\03\demos\Products.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductID"
+              DTS:DTSID="{83804774-F88C-441B-B32B-53757A766CED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductName"
+              DTS:DTSID="{35653141-43D1-49F6-B297-8ED05EF77C25}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SupplierID"
+              DTS:DTSID="{ABD29E23-363A-4BA0-AD23-0335FB2E3E60}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CategoryID"
+              DTS:DTSID="{81BE9179-A19C-41FB-82D0-B6C671A7F40D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QuantityPerUnit"
+              DTS:DTSID="{CB383E3A-C58C-4058-8529-B14292DCF4EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitPrice"
+              DTS:DTSID="{791DDB66-AD5B-4E7D-A4B5-A52428AB14CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitsInStock"
+              DTS:DTSID="{0199F6D6-1A37-4B80-8A0E-B54E49AF7B8B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UnitsOnOrder"
+              DTS:DTSID="{8BDFCC90-75C8-47C5-9759-F748EA59EC06}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ReorderLevel"
+              DTS:DTSID="{4A03CF47-A946-4029-9575-AC205E6D8A17}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Discontinued"
+              DTS:DTSID="{6668B58C-37A2-4CF3-B9BC-11E5FC31E10C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Import CSV"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{14DF85C8-7978-4A30-A0AE-1F8ADF52D459}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import CSV"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import CSV\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Import CSV\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import CSV\Conditional Split.Inputs[Conditional Split Input].Columns[ProductName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductName"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Conditional Split.Inputs[Conditional Split Input].Columns[matchProductName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="matchProductName"
+                      lineageId="Package\Import CSV\Lookup.Outputs[Lookup Match Output].Columns[matchProductName]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import CSV\Conditional Split.Outputs[Change]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Change"
+                  synchronousInputId="Package\Import CSV\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]} != #{Package\Import CSV\Lookup.Outputs[Lookup Match Output].Columns[matchProductName]}</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ProductName != matchProductName</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import CSV\Conditional Split.Outputs[NO Change]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="NO Change"
+                  synchronousInputId="Package\Import CSV\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import CSV\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Import CSV\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import CSV\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import CSV\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import CSV\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Import CSV\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import CSV\Data Conversion.Inputs[Data Conversion Input].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import CSV\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Import CSV\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import CSV\Data Conversion.Outputs[Data Conversion Output].Columns[int ProductID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import CSV\Data Conversion.Outputs[Data Conversion Output].Columns[int ProductID]"
+                      name="int ProductID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import CSV\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Import CSV\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import CSV\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import CSV\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import CSV\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="16393"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import CSV\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Products__CSV 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Products__CSV 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProductID]"
+                      length="50"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProductName]"
+                      length="50"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]"
+                      name="ProductName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[SupplierID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SupplierID]"
+                      length="50"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[SupplierID]"
+                      name="SupplierID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[CategoryID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CategoryID]"
+                      length="50"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[CategoryID]"
+                      name="CategoryID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[QuantityPerUnit]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[QuantityPerUnit]"
+                      length="50"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[QuantityPerUnit]"
+                      name="QuantityPerUnit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPrice]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitPrice]"
+                      length="50"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPrice]"
+                      name="UnitPrice"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsInStock]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitsInStock]"
+                      length="50"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsInStock]"
+                      name="UnitsInStock"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsOnOrder]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitsOnOrder]"
+                      length="50"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsOnOrder]"
+                      name="UnitsOnOrder"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ReorderLevel]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ReorderLevel]"
+                      length="50"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ReorderLevel]"
+                      name="ReorderLevel"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Discontinued]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Discontinued]"
+                      length="50"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Discontinued]"
+                      name="Discontinued"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ProductName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ProductName" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SupplierID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SupplierID" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[CategoryID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CategoryID" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[QuantityPerUnit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="QuantityPerUnit" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitPrice]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UnitPrice" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitsInStock]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UnitsInStock" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UnitsOnOrder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UnitsOnOrder" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ReorderLevel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ReorderLevel" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Discontinued]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Discontinued" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import CSV\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[ProductsCSV]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[ProductsCSV]) [refTable]
+where [refTable].[ProductID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ProductID" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ProductName" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SupplierID" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CategoryID" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="QuantityPerUnit" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="UnitPrice" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="UnitsInStock" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="UnitsOnOrder" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ReorderLevel" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Discontinued" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="intProductID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import CSV\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AdvWrk17]"
+                  connectionManagerRefId="Package.ConnectionManagers[AdvWrk17]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import CSV\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import CSV\Lookup.Inputs[Lookup Input].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">ProductID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import CSV\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Import CSV\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import CSV\Lookup.Outputs[Lookup Match Output].Columns[matchProductName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="100"
+                      lineageId="Package\Import CSV\Lookup.Outputs[Lookup Match Output].Columns[matchProductName]"
+                      name="matchProductName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">ProductName</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Lookup.Outputs[Lookup Match Output].Columns[matchUnitPrice]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Import CSV\Lookup.Outputs[Lookup Match Output].Columns[matchUnitPrice]"
+                      name="matchUnitPrice"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">UnitPrice</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import CSV\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Import CSV\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import CSV\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Import CSV\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import CSV\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import CSV\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import CSV\Products"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Products"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[ProductsCSV]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import CSV\Products.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AdvWrk17]"
+                  connectionManagerRefId="Package.ConnectionManagers[AdvWrk17]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].Columns[ProductName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductName"
+                      externalMetadataColumnId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].Columns[SupplierID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SupplierID"
+                      externalMetadataColumnId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[SupplierID]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[SupplierID]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].Columns[CategoryID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CategoryID"
+                      externalMetadataColumnId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[CategoryID]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].Columns[QuantityPerUnit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="QuantityPerUnit"
+                      externalMetadataColumnId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[QuantityPerUnit]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[QuantityPerUnit]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].Columns[UnitPrice]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UnitPrice"
+                      externalMetadataColumnId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPrice]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].Columns[UnitsInStock]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UnitsInStock"
+                      externalMetadataColumnId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[UnitsInStock]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsInStock]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].Columns[UnitsOnOrder]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UnitsOnOrder"
+                      externalMetadataColumnId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[UnitsOnOrder]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsOnOrder]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].Columns[ReorderLevel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ReorderLevel"
+                      externalMetadataColumnId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[ReorderLevel]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ReorderLevel]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].Columns[Discontinued]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Discontinued"
+                      externalMetadataColumnId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[Discontinued]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Discontinued]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].Columns[int ProductID]"
+                      cachedDataType="i4"
+                      cachedName="int ProductID"
+                      externalMetadataColumnId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[intProductID]"
+                      lineageId="Package\Import CSV\Data Conversion.Outputs[Data Conversion Output].Columns[int ProductID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="ProductName" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[SupplierID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SupplierID" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CategoryID" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[QuantityPerUnit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="QuantityPerUnit" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UnitPrice" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[UnitsInStock]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UnitsInStock" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[UnitsOnOrder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UnitsOnOrder" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[ReorderLevel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ReorderLevel" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[Discontinued]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Discontinued" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Products.Inputs[OLE DB Destination Input].ExternalColumns[intProductID]"
+                      dataType="i4"
+                      name="intProductID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import CSV\Products.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import CSV\Products.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import CSV\Products.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Products.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import CSV\Products.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Products.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import CSV\Row Sampling"
+              componentClassID="Microsoft.RowSampling"
+              contactInfo="Row Sampling;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Randomly samples a specific number of rows from an input data flow. For example, use it randomly select products to feature on your Web site."
+              name="Row Sampling">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of rows in the sample."
+                  expressionType="Notify"
+                  name="SamplingValue">10</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the seed for the random number generator."
+                  name="SamplingSeed">0</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1]"
+                  name="Row Sampling Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1].Columns[ProductName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductName"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1].Columns[SupplierID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SupplierID"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[SupplierID]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1].Columns[CategoryID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CategoryID"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[CategoryID]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1].Columns[QuantityPerUnit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="QuantityPerUnit"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[QuantityPerUnit]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1].Columns[UnitPrice]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UnitPrice"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPrice]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1].Columns[UnitsInStock]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UnitsInStock"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsInStock]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1].Columns[UnitsOnOrder]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UnitsOnOrder"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsOnOrder]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1].Columns[ReorderLevel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ReorderLevel"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ReorderLevel]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1].Columns[Discontinued]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Discontinued"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Discontinued]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1].Columns[int ProductID]"
+                      cachedDataType="i4"
+                      cachedName="int ProductID"
+                      lineageId="Package\Import CSV\Data Conversion.Outputs[Data Conversion Output].Columns[int ProductID]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1].Columns[matchProductName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="matchProductName"
+                      lineageId="Package\Import CSV\Lookup.Outputs[Lookup Match Output].Columns[matchProductName]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1].Columns[matchUnitPrice]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="matchUnitPrice"
+                      lineageId="Package\Import CSV\Lookup.Outputs[Lookup Match Output].Columns[matchUnitPrice]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output]"
+                  name="Sampling Selected Output">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Output for rows in the sample"
+                      name="Selected">true</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[ProductID]"
+                      name="ProductID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[ProductName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[ProductName]"
+                      name="ProductName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[SupplierID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[SupplierID]"
+                      name="SupplierID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[SupplierID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[CategoryID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[CategoryID]"
+                      name="CategoryID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[CategoryID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[QuantityPerUnit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[QuantityPerUnit]"
+                      name="QuantityPerUnit">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[QuantityPerUnit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[UnitPrice]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[UnitPrice]"
+                      name="UnitPrice">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPrice]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[UnitsInStock]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[UnitsInStock]"
+                      name="UnitsInStock">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsInStock]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[UnitsOnOrder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[UnitsOnOrder]"
+                      name="UnitsOnOrder">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsOnOrder]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[ReorderLevel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[ReorderLevel]"
+                      name="ReorderLevel">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ReorderLevel]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[Discontinued]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[Discontinued]"
+                      name="Discontinued">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Discontinued]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[int ProductID]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[int ProductID]"
+                      name="int ProductID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Data Conversion.Outputs[Data Conversion Output].Columns[int ProductID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[matchProductName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[matchProductName]"
+                      name="matchProductName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Lookup.Outputs[Lookup Match Output].Columns[matchProductName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[matchUnitPrice]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Selected Output].Columns[matchUnitPrice]"
+                      name="matchUnitPrice">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Lookup.Outputs[Lookup Match Output].Columns[matchUnitPrice]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output]"
+                  name="Sampling Unselected Output">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Output for rows in the sample"
+                      name="Selected">false</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[ProductID]"
+                      name="ProductID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[ProductName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[ProductName]"
+                      name="ProductName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[SupplierID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[SupplierID]"
+                      name="SupplierID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[SupplierID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[CategoryID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[CategoryID]"
+                      name="CategoryID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[CategoryID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[QuantityPerUnit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[QuantityPerUnit]"
+                      name="QuantityPerUnit">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[QuantityPerUnit]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[UnitPrice]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[UnitPrice]"
+                      name="UnitPrice">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitPrice]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[UnitsInStock]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[UnitsInStock]"
+                      name="UnitsInStock">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsInStock]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[UnitsOnOrder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[UnitsOnOrder]"
+                      name="UnitsOnOrder">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[UnitsOnOrder]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[ReorderLevel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[ReorderLevel]"
+                      name="ReorderLevel">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ReorderLevel]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[Discontinued]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[Discontinued]"
+                      name="Discontinued">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[Discontinued]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[int ProductID]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[int ProductID]"
+                      name="int ProductID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Data Conversion.Outputs[Data Conversion Output].Columns[int ProductID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[matchProductName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[matchProductName]"
+                      name="matchProductName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Lookup.Outputs[Lookup Match Output].Columns[matchProductName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[matchUnitPrice]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Import CSV\Row Sampling.Outputs[Sampling Unselected Output].Columns[matchUnitPrice]"
+                      name="matchUnitPrice">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Input column lineage ID"
+                          name="InputColumnLineageID">#{Package\Import CSV\Lookup.Outputs[Lookup Match Output].Columns[matchUnitPrice]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import CSV\Stage Updates"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Stage Updates"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[stage].[UpdateProducts]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import CSV\Stage Updates.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AdvWrk17]"
+                  connectionManagerRefId="Package.ConnectionManagers[AdvWrk17]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import CSV\Stage Updates.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import CSV\Stage Updates.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\Import CSV\Stage Updates.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\Import CSV\Stage Updates.Inputs[OLE DB Destination Input].Columns[ProductName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ProductName"
+                      externalMetadataColumnId="Package\Import CSV\Stage Updates.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
+                      lineageId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output].Columns[ProductName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Stage Updates.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Import CSV\Stage Updates.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="ProductName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import CSV\Stage Updates.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import CSV\Stage Updates.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import CSV\Stage Updates.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Stage Updates.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import CSV\Stage Updates.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import CSV\Stage Updates.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import CSV.Paths[Change]"
+              endId="Package\Import CSV\Stage Updates.Inputs[OLE DB Destination Input]"
+              name="Change"
+              startId="Package\Import CSV\Conditional Split.Outputs[Change]" />
+            <path
+              refId="Package\Import CSV.Paths[Data Conversion Output]"
+              endId="Package\Import CSV\Lookup.Inputs[Lookup Input]"
+              name="Data Conversion Output"
+              startId="Package\Import CSV\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Import CSV.Paths[Flat File Source Output]"
+              endId="Package\Import CSV\Data Conversion.Inputs[Data Conversion Input]"
+              name="Flat File Source Output"
+              startId="Package\Import CSV\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Import CSV.Paths[Lookup Match Output]"
+              endId="Package\Import CSV\Conditional Split.Inputs[Conditional Split Input]"
+              name="Lookup Match Output"
+              startId="Package\Import CSV\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Import CSV.Paths[Lookup No Match Output]"
+              endId="Package\Import CSV\Products.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Import CSV\Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Import CSV.Paths[NO Change]"
+              endId="Package\Import CSV\Row Sampling.Inputs[Row Sampling Input 1]"
+              name="NO Change"
+              startId="Package\Import CSV\Conditional Split.Outputs[NO Change]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Table SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C05AE40D-A8FC-44A5-B402-7ED856E9FB18}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Table SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4CFD652F-1358-4C87-9805-5A4A88D326B6}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE stage.UpdateProducts" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update ProductName SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{3FC7E8BA-C760-45E2-8FE9-1B077023FE8A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update ProductName SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4CFD652F-1358-4C87-9805-5A4A88D326B6}"
+          SQLTask:SqlStatementSource="UPDATE dbo.ProductsCSV &#xA;&#x9;SET c.ProductName = u.ProductName&#xA;&#x9;FROM dbo.ProductsCSV c&#xA;&#x9;&#x9;INNER JOIN stage.UpdateProducts u ON u.ProductID = c.ProductID" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{743A87F6-6CF1-4456-9CD1-EE02023FD2F5}"
+      DTS:EventID="729863679"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{F3FDE749-C317-4927-ABD1-599EC0E793EF}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Log on error"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{8a9bd7ee-d228-4d59-a731-4f8130cff054}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Log on error"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="SqlStatementSource">"insert into Error_Logs values('"+ @[System::MachineName] +"','"+ @[System::PackageName] +"','"+ @[System::SourceName] +"',"+ (DT_WSTR,12)@[System::ErrorCode] +",'"+replace( @[System::ErrorDescription],"","") +"',getdate())"</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{4CFD652F-1358-4C87-9805-5A4A88D326B6}"
+              SQLTask:SqlStatementSource="insert into Error_Logs values('AMAN','WorkPackage','',0,'',getdate())" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Import CSV"
+          TopLeft="204,161" />
+        <NodeLayout
+          Size="235,42"
+          Id="Package\Truncate Table SQL Task"
+          TopLeft="862,35" />
+        <NodeLayout
+          Size="236,42"
+          Id="Package\Update ProductName SQL Task"
+          TopLeft="858,248" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Import CSV">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="122,42"
+          Id="Package\Import CSV\Products"
+          TopLeft="651.222222222222,202.111111111111" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Import CSV\Data Conversion"
+          TopLeft="262.777777777778,64.5555555555555" />
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Import CSV\Stage Updates"
+          TopLeft="92,364.666666666666" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Import CSV\Flat File Source"
+          TopLeft="60,65.3333333333333" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Import CSV\Lookup"
+          TopLeft="560,60" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Import CSV\Row Sampling"
+          TopLeft="384.333333333333,368.111111111111" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Import CSV\Conditional Split"
+          TopLeft="206.888888888889,193" />
+        <EdgeLayout
+          Id="Package\Import CSV.Paths[Lookup Match Output]"
+          TopLeft="599.666666666667,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-313.277777777778,91"
+              Start="0,0"
+              End="-313.277777777778,83.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.1492281303602" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.1492281303602"
+                    Point2="0,37.1492281303602"
+                    Point3="-4,37.1492281303602" />
+                  <mssgle:LineSegment
+                    End="-309.277777777778,37.1492281303602" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-309.277777777778,37.1492281303602"
+                    Point2="-313.277777777778,37.1492281303602"
+                    Point3="-313.277777777778,41.1492281303602" />
+                  <mssgle:LineSegment
+                    End="-313.277777777778,83.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-204.830275607639,42.1492281303602,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import CSV.Paths[Flat File Source Output]"
+          TopLeft="216,85.9444444444444">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46.777777777778,0"
+              Start="0,0"
+              End="39.277777777778,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="39.277777777778,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import CSV.Paths[Data Conversion Output]"
+          TopLeft="423.777777777778,83.2777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="136.222222222222,0"
+              Start="0,0"
+              End="128.722222222222,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="128.722222222222,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import CSV.Paths[Change]"
+          TopLeft="261.222222222222,235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-93.2222222222222,129.666666666667"
+              Start="0,0"
+              End="-93.2222222222222,122.166666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.6417600664176" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.6417600664176"
+                    Point2="0,52.6417600664176"
+                    Point3="-4,52.6417600664176" />
+                  <mssgle:LineSegment
+                    End="-89.2222222222222,52.6417600664176" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-89.2222222222222,52.6417600664176"
+                    Point2="-93.2222222222222,52.6417600664176"
+                    Point3="-93.2222222222222,56.6417600664176" />
+                  <mssgle:LineSegment
+                    End="-93.2222222222222,122.166666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-63.9249782986111,57.6417600664176,34.627734375,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import CSV.Paths[NO Change]"
+          TopLeft="311.555555555556,235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="147.777777777778,133.111111111111"
+              Start="0,0"
+              End="147.777777777778,125.611111111111">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.0401273004013" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50.0401273004013"
+                    Point2="0,54.0401273004013"
+                    Point3="4,54.0401273004013" />
+                  <mssgle:LineSegment
+                    End="143.777777777778,54.0401273004013" />
+                  <mssgle:CubicBezierSegment
+                    Point1="143.777777777778,54.0401273004013"
+                    Point2="147.777777777778,54.0401273004013"
+                    Point3="147.777777777778,58.0401273004013" />
+                  <mssgle:LineSegment
+                    End="147.777777777778,125.611111111111" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="48.342541232639,59.0401273004013,51.0926953125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import CSV.Paths[Lookup No Match Output]"
+          TopLeft="635.333333333333,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76.8888888888889,100.111111111111"
+              Start="0,0"
+              End="76.8888888888889,92.6111111111111">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.8686868686869" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.8686868686869"
+                    Point2="0,40.8686868686869"
+                    Point3="4,40.8686868686869" />
+                  <mssgle:LineSegment
+                    End="72.8888888888889,40.8686868686869" />
+                  <mssgle:CubicBezierSegment
+                    Point1="72.8888888888889,40.8686868686869"
+                    Point2="76.8888888888889,40.8686868686869"
+                    Point3="76.8888888888889,44.8686868686869" />
+                  <mssgle:LineSegment
+                    End="76.8888888888889,92.6111111111111" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-17.3619422743055,45.8686868686869,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import CSV\Products">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="139,42"
+          Id="Package.EventHandlers[OnError]\Log on error"
+          TopLeft="313,54" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
