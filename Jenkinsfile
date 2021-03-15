@@ -6,6 +6,6 @@ node {
         echo 'Upgrading target schema'
     }
     stage('Execute Package') {
-		bat label: 'Executing package', script: 'dtexec /f FirstSSISPackage.dtsx'
+		bat label: 'Executing package', script: 'dtexec /f .\FirstSSISPackage.dtsx'
     }
  }
